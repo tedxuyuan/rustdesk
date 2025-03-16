@@ -778,7 +778,7 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
             tiles: enhancementsTiles,
           ),
         SettingsSection(
-          title: Text(translate("About")),
+          title: Text("About"),
           tiles: [
             SettingsTile(
                 onPressed: (context) async {
@@ -787,7 +787,7 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
                 title: Text(translate("Version: ") + version),
                 value: Padding(
                   padding: EdgeInsets.symmetric(vertical: 8),
-                  child: Text('rustdesk.com',
+                  child: Text('raresoft.net',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
                       )),
@@ -810,9 +810,9 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
                   ),
                   leading: Icon(Icons.fingerprint)),
             SettingsTile(
-              title: Text(translate("Privacy Statement")),
+              title: Text(translate("Website")),
               onPressed: (context) =>
-                  launchUrlString('https://rustdesk.com/privacy.html'),
+                  launchUrlString('https://www.raresoft.net'),
               leading: Icon(Icons.privacy_tip),
             )
           ],

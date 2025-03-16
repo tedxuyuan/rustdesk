@@ -94,7 +94,7 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
                       children: [
                         Flexible(
                           child: Text(
-                            translate('setup_server_tip'),
+                            'Raresoft',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 fontSize: em),
