@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=RustDesk
+Name=RareDesk
 GenericName=Remote Desktop
 Comment=Remote Desktop
-Exec=rustdesk %u
-Icon=rustdesk
+Exec=raredesk %u
+Icon=raredesk
 Terminal=false
 Type=Application
 StartupNotify=true
