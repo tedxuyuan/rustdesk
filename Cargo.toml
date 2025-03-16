@@ -1,11 +1,11 @@
 [package]
-name = "raredesk"
+name = "rustdesk"
 version = "1.3.9"
-authors = ["raredesk <service@raresoft.net>"]
-edition = "2025"
+authors = ["rustdesk <info@rustdesk.com>"]
+edition = "2021"
 build= "build.rs"
-description = "RareDesk Remote Desktop"
-default-run = "raredesk"
+description = "RustDesk Remote Desktop"
+default-run = "rustdesk"
 rust-version = "1.75"
 
 [lib]
