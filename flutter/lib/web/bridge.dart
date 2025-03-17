@@ -1574,7 +1574,7 @@ class RustdeskImpl {
   }
 
   bool isIncomingOnly({dynamic hint}) {
-    return false;
+    return true;
   }
 
   bool isOutgoingOnly({dynamic hint}) {
