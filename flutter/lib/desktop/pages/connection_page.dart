@@ -518,9 +518,9 @@ class _ConnectionPageState extends State<ConnectionPage>
                   //   child: Text(translate("Connect")),
                   // ),
                   child: Obx(() {
-                    final isLoggedIn = bind.mainGetLocalOption('access_token') != ''; // Check if access token exists
+                    final isLoggedIn = UserModel.getLocalUserInfo() != null;
                     return ElevatedButton(
-                      onPressed: isLoggedIn ? () => onConnect() : null, // Disable when not logged in
+                      onPressed: isLoggedIn ? () => onConnect() : null,
                       child: Text(translate("Connect")),
                     );
                   }),
