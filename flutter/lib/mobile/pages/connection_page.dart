@@ -104,8 +104,7 @@ class _ConnectionPageState extends State<ConnectionPage> {
     // connect(context, id);
     final isLoggedIn = UserModel.getLocalUserInfo() != null;
     if (isLoggedIn) {
-      connect(context, id,
-          isFileTransfer: isFileTransfer, isViewCamera: isViewCamera);
+      connect(context, id);
     };
   }
 
