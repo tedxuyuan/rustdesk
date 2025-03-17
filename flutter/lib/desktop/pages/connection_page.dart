@@ -511,12 +511,19 @@ class _ConnectionPageState extends State<ConnectionPage>
               child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 SizedBox(
                   height: 28.0,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      onConnect();
-                    },
-                    child: Text(translate("Connect")),
-                  ),
+                  // child: ElevatedButton(
+                  //   onPressed: () {
+                  //     onConnect();
+                  //   },
+                  //   child: Text(translate("Connect")),
+                  // ),
+                  child: Obx(() {
+                    final isLoggedIn = bind.mainGetLoginState(); // Get login state
+                    return ElevatedButton(
+                      onPressed: isLoggedIn ? () => onConnect() : null, // Disable when not logged in
+                      child: Text(translate("Connect")),
+                    );
+                  }),
                 ),
                 const SizedBox(width: 8),
                 Container(
