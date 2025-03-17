@@ -584,7 +584,7 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("2FA code must be 6 digits.", "2단계 인증 코드는 6자리여야 합니다."),
         ("Multiple Windows sessions found", "여러 Windows 세션이 발견되었습니다."),
         ("Please select the session you want to connect to", "연결하려는 세션을 선택하세요."),
-        ("powered_by_me", "RustDesk 제공"),
+        ("powered_by_me", "Raresoft 제공"),
         ("outgoing_only_desk_tip", "이것은 맞춤형 버전입니다.\n다른 장치에 연결할 수 있지만 다른 장치는 귀하의 장치에 연결할 수 없습니다."),
         ("preset_password_warning", "이 맞춤형 에디션은 미리 설정된 비밀번호가 포함되어 있습니다. 이 비밀번호를 아는 사람은 누구나 귀하의 장치를 완전히 제어할 수 있습니다. 이 상황을 예상하지 못했다면, 즉시 소프트웨어를 삭제하시기 바랍니다."),
         ("Security Alert", "보안 경고"),

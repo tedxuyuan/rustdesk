@@ -94,7 +94,7 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
                       children: [
                         Flexible(
                           child: Text(
-                            'Raresoft',
+                            ' Raresoft | 睿斯福得',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 fontSize: em),
