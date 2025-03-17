@@ -87,7 +87,7 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(', ', style: TextStyle(fontSize: em)),
+                Text('.  ', style: TextStyle(fontSize: em)),
                 Flexible(
                   child: InkWell(
                     onTap: onUsePublicServerGuide,
@@ -95,7 +95,7 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
                       children: [
                         Flexible(
                           child: Text(
-                            ' Raresoft | 睿斯福得',
+                            'Raresoft | 睿斯福得',
                             style: TextStyle(
                                 decoration: TextDecoration.underline,
                                 fontSize: em),
@@ -330,8 +330,11 @@ class _ConnectionPageState extends State<ConnectionPage>
   /// Connects to the selected peer.
   void onConnect({bool isFileTransfer = false, bool isViewCamera = false}) {
     var id = _idController.id;
-    connect(context, id,
-        isFileTransfer: isFileTransfer, isViewCamera: isViewCamera);
+    final isLoggedIn = UserModel.getLocalUserInfo() != null;
+    if (isLoggedIn) {
+      connect(context, id,
+          isFileTransfer: isFileTransfer, isViewCamera: isViewCamera);
+    };
   }
 
   /// UI for the remote ID TextField.
@@ -512,19 +515,12 @@ class _ConnectionPageState extends State<ConnectionPage>
               child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 SizedBox(
                   height: 28.0,
-                  // child: ElevatedButton(
-                  //   onPressed: () {
-                  //     onConnect();
-                  //   },
-                  //   child: Text(translate("Connect")),
-                  // ),
-                  child: Obx(() {
-                    final isLoggedIn = UserModel.getLocalUserInfo() != null;
-                    return ElevatedButton(
-                      onPressed: isLoggedIn ? () => onConnect() : null,
-                      child: Text(translate("Connect")),
-                    );
-                  }),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      onConnect();
+                    },
+                    child: Text(translate("Connect")),
+                  ),
                 ),
                 const SizedBox(width: 8),
                 Container(
