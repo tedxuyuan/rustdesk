@@ -3426,7 +3426,7 @@ Widget loadPowered(BuildContext context) {
         launchUrl(Uri.parse('https://www.raresoft.net'));
       },
       child: Opacity(
-          opacity: 0.2,
+          opacity: 0.8,
           child: Text(
             translate("powered_by_me"),
             overflow: TextOverflow.clip,
