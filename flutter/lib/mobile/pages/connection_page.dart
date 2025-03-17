@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hbb/common/formatter/id_formatter.dart';
 import 'package:flutter_hbb/common/widgets/connection_page_title.dart';
 import 'package:flutter_hbb/models/state_model.dart';
+import 'package:flutter_hbb/models/user_model.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -100,7 +101,12 @@ class _ConnectionPageState extends State<ConnectionPage> {
   /// Connects to the selected peer.
   void onConnect() {
     var id = _idController.id;
-    connect(context, id);
+    // connect(context, id);
+    final isLoggedIn = UserModel.getLocalUserInfo() != null;
+    if (isLoggedIn) {
+      connect(context, id,
+          isFileTransfer: isFileTransfer, isViewCamera: isViewCamera);
+    };
   }
 
   void onFocusChanged() {

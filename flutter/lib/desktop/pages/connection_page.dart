@@ -328,6 +328,7 @@ class _ConnectionPageState extends State<ConnectionPage>
 
   /// Callback for the connect button.
   /// Connects to the selected peer.
+  // Raresoft
   void onConnect({bool isFileTransfer = false, bool isViewCamera = false}) {
     var id = _idController.id;
     final isLoggedIn = UserModel.getLocalUserInfo() != null;
@@ -336,6 +337,7 @@ class _ConnectionPageState extends State<ConnectionPage>
           isFileTransfer: isFileTransfer, isViewCamera: isViewCamera);
     };
   }
+// Raresoft End
 
   /// UI for the remote ID TextField.
   /// Search for a peer.
